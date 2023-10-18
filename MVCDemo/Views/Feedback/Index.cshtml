@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Feedback.js"></script>
+
+<h2>Index</h2>
+<input type="hidden" id="hdnId">
+<lable>Name</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="txtName" placeholder="Enter your name" />
+<br>
+<br>
+
+<lable>Number</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="txtNumber" placeholder="Contact number" />
+<br>
+<br>
+
+<lable>IDANumber</lable>
+<input type="text" id="txtIDANumber" placeholder="Identity number" />
+<br>
+<br>
+
+<lable>Address</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<textarea id="txtAddress" rows="2" colms="2" placeholder="Address"></textarea>
+<br>
+<br>
+
+<lable>Email</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="txtEmail" placeholder="Email id" />
+<br>
+<br>
+
+<lable>Grade</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="txtGrade" placeholder="Give Feedback here" />
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-success" onclick="saveFeedback()">submit</button>
+
+
+<table border="1" id="tblFeedback" class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Number</th>
+            <th>IDANumber</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+

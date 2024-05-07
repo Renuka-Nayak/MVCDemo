@@ -15,6 +15,11 @@ namespace MVCDemo.Controllers
         {
             return View();
         }
+        public ActionResult IndexBoostrap()
+        {
+            return View();
+        }
+
         public ActionResult DetailIndex(int Id)
         {
             ViewBag.Id = Id;
@@ -63,11 +68,11 @@ namespace MVCDemo.Controllers
 
         }
 
-        public ActionResult EditFeedback(int Id)
+        public ActionResult GetbyIdFeedback(int Id)
         {
             try
             {
-                return Json(new { model = (new FeedbackModel().EditFeedback(Id)) },JsonRequestBehavior.AllowGet);
+                return Json(new { model = (new FeedbackModel().GetbyIdFeedback(Id)) },JsonRequestBehavior.AllowGet);
             }
             catch (Exception Ex)
             {
@@ -78,7 +83,7 @@ namespace MVCDemo.Controllers
         {
             try
             {
-                return Json(new { model = (new FeedbackModel().EditFeedback(Id)) }, JsonRequestBehavior.AllowGet);
+                return Json(new { model = (new FeedbackModel().GetbyIdFeedback(Id)) }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception Ex)
             {

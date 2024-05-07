@@ -1,6 +1,9 @@
 ﻿using MVCDemo.Data;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -24,6 +27,7 @@ namespace MVCDemo.Models
             {
                 var FeedbackData = new tblFeedback()
                 {
+                    Id= model.Id,
                     Name = model.Name,
                     Number = model.Number,
                     IDANumber = model.IDANumber,
@@ -86,6 +90,37 @@ namespace MVCDemo.Models
             }
         }
 
+        //List using store procedure select query
+
+        //public List<FeedbackModel> Feedbacklist(string search)
+        //{
+        //    List<FeedbackModel> lstFeedback = new List<FeedbackModel>();
+
+        //    string connstring = ConfigurationManager.ConnectionStrings["dbConnection"].ToString();
+        //    SqlConnection sqlConnection = new SqlConnection();
+        //    sqlConnection = new SqlConnection(connstring);
+        //    SqlCommand cmd = sqlConnection.CreateCommand();
+        //    cmd.CommandText = "usp_Feedback";
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    SqlDataReader rdr = cmd.ExecuteReader();
+        //    while (rdr.Read())
+        //    {
+        //        lstFeedback.Add(new FeedbackModel()
+        //        {
+
+        //            Id = Convert.ToInt32(rdr["ID"]),
+        //            Name = Convert.ToString(rdr["Name"]),
+        //            Number = Convert.ToInt32(rdr["Number"]),
+        //            IDANumber = Convert.ToInt32(rdr["IDANumber"]),
+        //            Address = Convert.ToString(rdr["Address"]),
+        //            Email = Convert.ToString(rdr["Email"]),
+        //            Grade = Convert.ToInt32(rdr["Grade"]),
+        //        });
+        //    }
+        //    return lstFeedback;
+        //}
+
+
         public string DeleteFeedbackData(int Id)
         {
             string msg = "";
@@ -101,7 +136,7 @@ namespace MVCDemo.Models
             return msg;
         }
 
-        public FeedbackModel EditFeedback(int Id)
+        public FeedbackModel GetbyIdFeedback(int Id)
         {
             string msg = "";
             FeedbackModel model = new FeedbackModel();

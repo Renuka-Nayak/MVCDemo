@@ -1,56 +1,78 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script src="~/Content/Feedback.js"></script>
 
-<h2>Index</h2>
-<input type="hidden" id="hdnId">
-<lable>Name</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="text" id="txtName" placeholder="Enter your name" />
-<br>
-<br>
-
-<lable>Number</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="text" id="txtNumber" placeholder="Contact number" />
-<br>
-<br>
-
-<lable>IDANumber</lable>
-<input type="text" id="txtIDANumber" placeholder="Identity number" />
-<br>
-<br>
-
-<lable>Address</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<textarea id="txtAddress" rows="2" colms="2" placeholder="Address"></textarea>
-<br>
-<br>
-
-<lable>Email</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="text" id="txtEmail" placeholder="Email id" />
-<br>
-<br>
-
-<lable>Grade</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="text" id="txtGrade" placeholder="Give Feedback here" />
-<br>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button class="btn btn-success" onclick="saveFeedback()">submit</button>
 
 
-<table border="1" id="tblFeedback" class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Number</th>
-            <th>IDANumber</th>
-            <th>Address</th>
-            <th>Email</th>
-            <th>Grade</th>
-        </tr>
-    </thead>
-    <tbody></tbody>
-</table>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="container bg-info ">
+            <h2>Index</h2>
+            <input type="hidden" id="hdnId">
+            <lable>Name</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="txtName" placeholder="Enter your name" class="form-control" />
+            <br>
+            <br>
 
+            <lable>Number</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="txtNumber" placeholder="Contact number" class="form-control" />
+            <br>
+            <br>
+
+            <lable>IDANumber</lable>
+            <input type="text" id="txtIDANumber" placeholder="Identity number" class="form-control" />
+            <br>
+            <br>
+
+            <lable>Address</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<textarea id="txtAddress" rows="2" colms="2" placeholder="Address" class="form-control"></textarea>
+            <br>
+            <br>
+
+            <lable>Email</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="txtEmail" placeholder="Email id" class="form-control" />
+            <br>
+            <br>
+
+            <lable>Grade</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="txtGrade" placeholder="Give Feedback here" class="form-control" />
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-success" onclick="saveFeedback()">submit</button>
+
+        </div>
+    </div>
+    <div class="col-sm-6 container-fluid">
+        <table border="1" id="tblFeedback" class="table  bg-gradient">
+            <thead>
+                <tr class="text-bg-light">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>IDANumber</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+</div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/659cf36a8d261e1b5f5107eb/1hjmhdms3';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->

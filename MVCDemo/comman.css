@@ -1,0 +1,20 @@
+﻿body {
+    background-color:aquamarine;
+}
+h1,h2,h3,h4{
+    color:white;
+}
+
+.hello{
+    display:flex;
+    
+    flex-direction:row;
+    background-color:red;
+    margin:auto;
+   
+
+}
+    .hello ul li {
+        background-color: azure;
+        margin: 10px;
+    }

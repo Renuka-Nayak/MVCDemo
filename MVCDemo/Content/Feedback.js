@@ -42,7 +42,7 @@ var saveFeedback = function () {
 }
 
 var Feedbacklist = function () {
-    debugger;
+    
     $.ajax({
         url: "/Feedback/ListFeedback",
         method: "post",
@@ -59,7 +59,7 @@ var Feedbacklist = function () {
                     "</td><td>" + elementvalue.Address +
                     "</td><td>" + elementvalue.Email +
                     "</td><td>" + elementvalue.Grade +
-                    "</td><td><input type='button' class='btn btn-secondary' value='Edit' onclick='EditFeedback(" + elementvalue.Id +
+                    "</td><td><input type='button' class='btn btn-secondary' value='Edit' onclick='GetbyIdFeedback(" + elementvalue.Id +
                     ")'><i class='bi bi-pencil-square'></i></button></td><td><input type='submit' class='btn btn-danger' value='Delete' onclick='DeleteFeedback(" + elementvalue.Id +
                     ")'/></td><td><input type='button' class='btn btn-success' value='Details' onclick='Details(" + elementvalue.Id + ")'/></td></tr>";
             });
@@ -88,11 +88,11 @@ var DeleteFeedback = function (Id)
 
 }
 
-var EditFeedback  = function (Id) {
+var GetbyIdFeedback  = function (Id) {
     var model = { Id: Id };
     $.ajax({
 
-        url: "/Feedback/EditFeedback",
+        url: "/Feedback/GetbyIdFeedback",
         method: "post",
         data: JSON.stringify(model),
         contentType: "application/json;charset=utf-8",
@@ -116,14 +116,14 @@ var Details = function (Id) {
     window.location.href = "/Feedback/DetailIndex?Id=" + Id
 }
 var GetDetails = function (Id) {
-    debugger;
+    
     var id = $("#hdnId").val();
     model = {
         Id: id
     }
     $.ajax({
 
-        url: "/Feedback/EditFeedback",
+        url: "/Feedback/GetbyIdFeedback",
         method: "post",
         data: JSON.stringify(model),
         contentType: "application/json;charset=utf-8",
@@ -145,3 +145,17 @@ var GetDetails = function (Id) {
         }
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
